@@ -13,4 +13,4 @@ class User(db.Model, UserMixin):
     password = db.Column(
         db.String(255),
         nullable=False
-    )
+    ) 

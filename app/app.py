@@ -2,18 +2,19 @@ from app import create_app
 from .database import db
 from flask_migrate import Migrate
 from app.models.user import User
+from app.models.appointment import Appointment
 from flask_login import LoginManager
 from .routes.auth import auth
 from flask_login import login_required
 from .routes.agenda import agenda
 from app.utils import get_string
+from .routes.api import api
 
 app = create_app()
 
 app.register_blueprint(auth)
 app.register_blueprint(agenda)
-with app.app_context():
-    db.create_all()
+app.register_blueprint(api)
 
 migrate = Migrate(app, db)
 

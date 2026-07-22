@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 from flask_login import login_required
 from flask_login import current_user
 
@@ -10,4 +10,4 @@ agenda = Blueprint(
 @agenda.route("/")
 @login_required
 def home():
-    return "Agenda Médica"
+    return render_template("agenda.html")

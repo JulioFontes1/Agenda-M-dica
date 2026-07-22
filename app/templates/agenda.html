@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda Médica</title>
+
+    <link href="https://unpkg.com/tabulator-tables@6.3.1/dist/css/tabulator.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<h1>Agenda Médica</h1>
+
+<div>
+    <label>Status:</label>
+
+    <select id="status-filter">
+        <option value="">Todos</option>
+        <option value="Agendada">Agendada</option>
+        <option value="Atendido">Atendido</option>
+        <option value="Cancelada">Cancelada</option>
+    </select>
+</div>
+<br>
+<select id="filter-type">
+    <option value="">Selecione</option>
+    <option value="doctor-filter">Médico</option>
+    <option value="patient-filter">Paciente</option>
+    <option value="cpf-filter">CPF</option>
+    <option value="hour-filter">Horário</option>
+</select>
+<br>
+<div>
+    <input id="doctor-filter" hidden placeholder="Nome do médico">
+
+    <input id="patient-filter" hidden placeholder="Nome do paciente">
+
+    <input id="cpf-filter" hidden placeholder="CPF">
+    <select id="hour-filter" hidden>
+        <option value="">Todos</option>
+        <option value="08:00">08:00</option>
+        <option value="09:00">09:00</option>
+        <option value="10:00">10:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+    </select>
+</div>
+
+<br>
+
+<div id="agenda-table"></div>
+<div>
+    <p id="no-results" hidden>Nenhum agendamento encontrado!</p>
+</div>
+<script src="https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js"></script>
+<script>
+</script>
+
+<script src="{{ url_for('static', filename='js/agenda.js') }}"></script>
+
+</body>
+
+</html>

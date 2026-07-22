@@ -7,7 +7,7 @@ with app.app_context():
     user = User(
         name="Admin",
         email="admin@email.teste",
-        password=generate_password_hash("senha_teste")
+        password=generate_password_hash("teste1234")
     )
 
     db.session.add(user)
