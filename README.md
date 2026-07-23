@@ -146,6 +146,9 @@ agenda-medica/
 ├── instance/
 │   └── agenda.db
 │
+├── mock/
+│   |── getuser.py
+│   └── user.py
 ├── requirements.txt
 ├── pytest.ini
 └── README.md
